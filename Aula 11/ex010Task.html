@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando nacionalidade</title>
+    <style>
+        body {
+            background-color: white;
+            font: normal 18px Arial;
+            color: black
+        }
+        div#divv {
+            width: 450px;
+            height: 340px;
+            background-color: gray;
+        }
+        input#opais {
+            width: 150px;
+            height: 20px;
+            margin-left: 10px;
+        }
+        h1 {
+            margin-left: 10px;
+        }
+        div#resultado {
+            width: 250px;
+            height: 220px;
+            background-color: rgb(20, 20, 20);
+            color: white;
+            margin-top: 15px;
+            margin-left: 10px;
+        }
+        input#obotao {
+            height: 26px
+        }
+    </style>
+</head>
+<body>
+    <div id="divv">
+        <h1>Teste de nacionalidade</h1>
+        <input type="text" value="Digite seu país..." id="opais">
+        <input type="button" value="VERIFICAR" onclick="verificando()" id="obotao">
+        <div id="resultado">
+        </div>
+    </div>
+    <script> function verificando() {        
+        var country = document.querySelector('input#opais')
+        var result = document.querySelector('div#resultado')
+        var nac = String(country.value)
+        result.innerHTML += `<p>Você está em <strong>${nac}</strong>.</p>`
+        if (nac == 'Canada') {
+            result.innerHTML += `<p>Então você é <b>Canadense!</b></p>`
+        } else {
+            result.innerHTML += `<p>Então você é estrangeiro!</P>`
+        }
+    }        
+    </script>           
+</body>
+</html> 

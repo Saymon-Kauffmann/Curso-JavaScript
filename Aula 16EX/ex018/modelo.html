@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de números</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Analisador de números</h1>
+    </header>  
+    <section>
+        <div>
+            Número (entre 1 e 1000):
+            <input type="number" name="onumero" id="onumero"> 
+            <input type="button" id="botao1" value="ADICIONAR" onclick="Adicionar()">
+            <br><br><select name="alista" id="alista" size="10"></select>
+            <br><input type="button" value="FINALIZAR" onclick="Finalizar()"> 
+            <input type="button" value="LIMPAR TUDO" onclick="Limpar()">
+        </div>
+        <div id="resultado">
+            
+        </div>
+    </section>
+    <footer>
+        <p>&copy;SaymonKauffmann</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <style>
+        body {
+            background-color: gray;
+            font: normal 20px Arial;
+        }
+        input {
+            font: normal 20px Arial;
+            width: 150px;
+        }
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de soma</h1>  
+    <p>Com o tempo irei aprendendo e implementando o estilo da calculadora, e também</br>
+    se implementando divisão, multiplicação, subtração e etc.</p>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado...</div>
+    <script>
+        var nome = window.prompt('Qual seu nome?')
+        window.alert(`Olá ${nome}, por enquanto a calculadora só faz soma ok`)
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1') // Ex: Usando o get para function.
+            var tn2 = window.document.querySelector('input#txtn2') // Ex: Usei query (funcionam igual, é só para variar mesmo).          
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value) // Isso foi nessesario pois senão tn1 e tn2 iam concatenar e não somar.
+            var s = n1 + n2 // Lembresse que os valores sempre virão em 'string' então mude para 'number' para depois usar.
+            res.innerHTML = `${n1} + ${n2} = <strong>${s}</strong>` 
+        }    
+    </script>
+</body>
+</html>

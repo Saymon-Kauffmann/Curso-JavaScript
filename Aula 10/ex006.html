@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo</title>
+    <style>
+        div#area {
+            background-color: pink;
+            color: black;
+            font: 25px Arial;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <!-- <div> id='area' onclick="clicar()" onmouseenter="entrar()" onmouseout="sair"> -->
+    <!-- o exemplo acima é outra forma de ser feito os eventos, mas suja muito o html -->    
+    <div id="area">
+        clique aqui
+    </div>
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        a.addEventListener('mousemove', moveu)
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+        function entrar() {
+            a.innerText = 'Entrou!'
+        }
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'pink'
+        }
+        function moveu() {
+            a.innerText='Ta movendo'     
+        }
+    </script>
+</body>
+</html>
